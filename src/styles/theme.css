@@ -1,0 +1,37 @@
+@layer utilities {
+  .bg-primary { background-color: #82D173; }
+  .bg-primaryDark { background-color: #6EBB5E; }
+  .bg-primaryLight { background-color: #C9F2D9; }
+  .text-primary { color: #82D173; }
+  .text-primaryDark { color: #6EBB5E; }
+  .text-darkText { color: #1A1A1A; }
+  .border-primary { border-color: #82D173; }
+
+  /* Gradient helpers matching brand colors */
+  .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
+  .bg-linear-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
+  .from-primary {
+    --tw-gradient-from: #82D173;
+    --tw-gradient-to: rgb(130 209 115 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .to-primaryDark { --tw-gradient-to: #6EBB5E; }
+}
+
+@layer components {
+  .btn-primary {
+    background-color: #82D173;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .btn-primary:hover { background-color: #6EBB5E; }
+
+  .section-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 2rem;
+  }
+}

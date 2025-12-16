@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@import "./styles/theme.css";
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+@import 'swiper/css/navigation';
+
+@layer base {
+  body {
+    background-color: #f9fafb; /* Tailwind's bg-gray-50 */
+    color: #111827;            /* Tailwind's text-gray-900 */
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeScale {
+  animation: fadeScale 0.25s ease-out forwards;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: scale(.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade {
+  animation: fade .25s ease-out;
+}
+
+@keyframes slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar utility */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* SWIPER ARROWS – THEMED */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #82D173 !important;      /* Theme green */
+  font-weight: bold;
+  top: 50% !important;           
+  transform: translateY(-50%);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #6EBB5E !important;       /* Slightly darker green */
+}
+
+/* Remove big arrow circle bg */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 28px !important;      /* Perfect size */
+}
+
+/* PAGINATION DOTS */
+.swiper-pagination {
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 25px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.swiper-pagination-bullet {
+  background: #c4c4c4 !important;
+  opacity: 1 !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 6px !important;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: #82D173 !important;
+  transform: scale(1.2);
+}
+
+.swiper-slide {
+  transition-timing-function: ease-out !important;
+}
